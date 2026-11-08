@@ -27,7 +27,9 @@ h1, h2, h3 {
 h1 { font-size: clamp(52px, 8vw, 110px); }
 h2 { font-size: clamp(42px, 6vw, 68px); }
 h3 { font-size: 30px; }
-em { color: #F7C6D9; }
+em { color: #FFFFFF; }
+
+.centralizado {margin: 0 auto; text-align: center;}
 
 .container {
   width: min(1200px, 90%);
@@ -58,7 +60,8 @@ em { color: #F7C6D9; }
 
 .botao {
   display: inline-block;
-  padding: 13px 25px;
+  padding: 10px 16px;
+  margin-right: 15px;
   border: 0;
   background: #F7C6D9;
   color: #0A0A0A;
