@@ -78,21 +78,22 @@ em { color: #FFFFFF; }
 .inicio {
   min-height: 620px;
   padding: 150px 0 100px;
-  background: linear-gradient(90deg, #0A0A0A 15%, rgba(10,10,10,.75) 55%, rgba(10,10,10,.25)),
-              #17131C;
+  background: linear-gradient(90deg, #0A0A0A 15%, rgba(10,10,10,.75) 55%, rgba(10,10,10,.25)),#17131C;
 }
-.inicio .container { max-width: 1200px; }
+.inicio .container {max-width: 1200px; }
 .subtitulo { margin-bottom: 18px; color: #F7C6D9; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; }
 .inicio h1 { margin-bottom: 24px; }
 .texto-inicio { max-width: 500px; margin-bottom: 24px; font-size: 18px; }
 .aviso-foto { margin-top: 55px; color: #9A90A8; font-size: 12px; }
+
+.foto-professora > .foto-perfil {width: 360px; height: 480px;}
 
 .secao#professora { display: grid; grid-template-columns: 1fr 1.2fr; align-items: center; gap: 60px; }
 .foto-professora, .galeria div, .mapa {
   display: grid;
   place-items: center;
   min-height: 300px;
-  padding: 24px;
+  padding: 2px;
   border: 1px solid #3B3545;
   background: #141218;
   color: #9A90A8;
