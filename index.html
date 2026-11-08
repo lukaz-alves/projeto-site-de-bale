@@ -1,10 +1,195 @@
-topo menu[logo][sobre nos, modalidade (faixa etaria), galeria, contato, aula esperimental]
-topo[sobre nos - texto]
-meio da pagina[endereço]
-meio da pagina[modalidade - faixa etaria]
-meio da pagina[galeria de fotos]
-meio da pagina[videos]
-meio da pagina[curiosidades do bale, livros, filmes]
-meio da pagina[informações sobre uniformes, lojas de referencia]
-final da pagina[depoimentos]
-final da pagina[contatos]
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Dança Camillavgs</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <a class="logo" href="#inicio">
+      <img src="assets/logo.png" alt="Logo do estúdio">
+      <span>Dança <em>Camillavgs</em></span>
+    </a>
+
+    <nav class="menu">
+      <a href="#professora">A professora</a>
+      <a href="#aulas">Aulas</a>
+      <a href="#horarios">Horários</a>
+      <a href="#espaco">O espaço</a>
+      <a href="#local">Local</a>
+    </nav>
+
+    <a class="botao botao-contorno" href="#contato">Matrículas abertas</a>
+  </header>
+
+  <main>
+    <!-- Apresentação -->
+    <section class="inicio" id="inicio">
+      <div class="container">
+        <p class="subtitulo">Estúdio de balé clássico · Desde 2021</p>
+        <h1>Dançar com<br><em>leveza e técnica</em></h1>
+        <p class="texto-inicio">Aulas de balé para crianças e adolescentes, em turmas pequenas e com muito carinho em cada passo. A primeira aula é por nossa conta.</p>
+        <a class="botao" href="#contato">Agendar aula experimental</a>
+        <a class="link" href="#horarios">Ver horários</a>
+        <p class="aviso-foto">Espaço reservado para a foto principal do estúdio.</p>
+      </div>
+    </section>
+
+    <!-- Professora -->
+    <section class="secao container" id="professora">
+      <div class="foto-professora">Foto da professora</div>
+      <div>
+        <p class="subtitulo">A professora</p>
+        <h2>Professora <em>Camilla</em></h2>
+        <p>Iniciou sua trajetória na dança há 17 anos, dedicando-se intensamente ao estudo da metodologia Vaganova nos últimos três anos.</p>
+        <p>Em 2021, iniciou o projeto Curso de Dança Camillavgs, onde atua como professora de ballet infantil.</p>
+        <div class="numeros">
+          <div><strong>5</strong><span>anos ensinando</span></div>
+          <div><strong>17</strong><span>anos de dança</span></div>
+          <div><strong>1</strong><span>espetáculo por ano</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Turmas -->
+    <section class="secao fundo-claro" id="aulas">
+      <div class="container">
+        <div class="titulo-linha">
+          <h2>As <em>aulas</em></h2>
+          <p>Cada turma é montada por idade e nível. Na aula experimental a professora indica a turma certa para você.</p>
+        </div>
+        <div class="grade tres-colunas">
+          <article class="cartao">
+            <p class="idade">4 a 5 anos</p>
+            <h3>Ballet Kids</h3>
+            <p>Musicalidade, coordenação e brincadeiras que apresentam os primeiros passos do balé.</p>
+            <hr>
+            <strong>Sábado às 9h</strong>
+            <small>1x por semana · 60 minutos</small>
+          </article>
+          <article class="cartao">
+            <p class="idade">6 a 7 anos</p>
+            <h3>Infantil 1</h3>
+            <p>Posições básicas, postura e o vocabulário do balé clássico, com aulas na barra e no centro.</p>
+            <hr>
+            <strong>Segunda às 19h30</strong>
+            <small>1x por semana · 60 minutos</small>
+          </article>
+          <article class="cartao">
+            <p class="idade">8 a 10 anos</p>
+            <h3>Infantil 2</h3>
+            <p>Evolução da técnica, com giros, saltos e preparação para o palco.</p>
+            <hr>
+            <strong>Sábado às 10h</strong>
+            <small>1x por semana · 60 minutos</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horários -->
+    <section class="secao container" id="horarios">
+      <div class="titulo-linha">
+        <h2>Horários <em>2026</em></h2>
+        <p>Segunda: início às 19h30<br>Sábado: das 9h às 10h<br>Cada aula dura 60 minutos.</p>
+      </div>
+      <div class="tabela-rolagem">
+        <table>
+          <thead><tr><th>Horário</th><th>Sábado</th><th>Segunda</th></tr></thead>
+          <tbody>
+            <tr><th>09:00 – 10:00</th><td>Ballet Kids (4 a 5 anos)</td><td>—</td></tr>
+            <tr><th>19:30 – 20:30</th><td>—</td><td>Infantil 1 (6 a 7 anos)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <small class="observacao">No celular, deslize a tabela para o lado.</small>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="secao secao-borda">
+      <div class="container">
+        <h2>Por que escolher o <em>nosso estúdio</em></h2>
+        <div class="grade quatro-colunas">
+          <article><span class="romano">I.</span><h3>Turmas pequenas</h3><p>No máximo 10 alunas por turma, para que cada uma receba correção e atenção.</p></article>
+          <article><span class="romano">II.</span><h3>Método Vaganova</h3><p>17 anos de dança e estudo dedicado da metodologia Vaganova.</p></article>
+          <article><span class="romano">III.</span><h3>Espetáculos de fim de ano</h3><p>As alunas sobem ao palco de um teatro de verdade, com figurino e cenário.</p></article>
+          <article><span class="romano">IV.</span><h3>Aula experimental</h3><p>Venha experimentar sem compromisso antes de fazer a matrícula.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Espaço -->
+    <section class="secao container" id="espaco">
+      <div class="titulo-linha">
+        <h2>O <em>espaço</em></h2>
+        <p>Sala ampla com piso flutuante de madeira, linóleo profissional, barras fixas e espelho em toda a parede.</p>
+      </div>
+      <div class="grade tres-colunas galeria">
+        <div>Foto da sala principal com espelhos</div>
+        <div>Foto das barras e piso de madeira</div>
+        <div>Foto de aula do baby class</div>
+        <div>Foto da recepção e sala de espera</div>
+        <div>Foto do vestiário</div>
+        <div>Foto do espetáculo de fim de ano</div>
+      </div>
+    </section>
+
+    <!-- Localização -->
+    <section class="secao fundo-claro" id="local">
+      <div class="container grade duas-colunas">
+        <div>
+          <h2>Onde <em>estamos</em></h2>
+          <p><strong>Rua Mateo de Aranda, Nº 90</strong><br>Fazenda da Juta · São Paulo - SP<br>CEP: 03977-770</p>
+          <ul>
+            <li>A 5 minutos a pé da estação de metrô</li>
+            <li>Estacionamento conveniado na mesma rua</li>
+            <li>Recepção com espaço de espera para os pais</li>
+          </ul>
+          <a class="botao botao-escuro" href="https://www.google.com/maps/search/?api=1&query=Rua+Mateo+de+Aranda+90+Sao+Paulo+SP" target="_blank" rel="noopener noreferrer">Abrir no mapa</a>
+        </div>
+        <div class="mapa">Espaço reservado para inserir o mapa do Google.</div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="secao container grade duas-colunas" id="contato">
+      <div>
+        <p class="subtitulo">Aula experimental grátis</p>
+        <h2>Venha conhecer <em>o estúdio</em></h2>
+        <p>Preencha seus dados e a professora entra em contato para marcar o melhor horário. Se preferir, chame direto no WhatsApp.</p>
+        <a class="link" href="https://wa.me/5511900000000">WhatsApp (11) 90000-0000</a>
+      </div>
+
+      <form class="formulario" onsubmit="alert('Formulário demonstrativo. Configure um serviço de envio para receber inscrições.'); return false;">
+        <label>Nome da aluna<input type="text" name="nome"></label>
+        <label>Idade<input type="number" name="idade"></label>
+        <label>WhatsApp<input type="tel" name="whatsapp"></label>
+        <label>Turma de interesse
+          <select name="turma">
+            <option>Ballet Kids (4 a 5 anos)</option>
+            <option>Infantil 1 (6 a 7 anos)</option>
+            <option>Infantil 2 (8 a 10 anos)</option>
+          </select>
+        </label>
+        <button class="botao" type="submit">Quero minha aula grátis</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <img src="assets/logo.png" alt="Logo do estúdio">
+    <span>Seg 19h30 · Sáb 9h e 10h</span>
+    <span>Instagram [@INSTAGRAM]</span>
+    <span>© 2026 Curso Dança Camillavgs</span>
+  </footer>
+
+</body>
+</html>
