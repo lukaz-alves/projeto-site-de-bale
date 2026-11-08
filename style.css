@@ -112,6 +112,8 @@ em { color: #FFFFFF; }
 .quatro-colunas { grid-template-columns: repeat(4, 1fr); }
 .duas-colunas { grid-template-columns: repeat(2, 1fr); }
 
+.imagens {height: 260px; width: 260px}
+
 .cartao { display: flex; flex-direction: column; gap: 14px; padding: 30px; background: #FFFFFF; border: 1px solid #CBBEE0; }
 .cartao p { color: #3F3A4A; }
 .cartao .idade { color: #575066; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; }
