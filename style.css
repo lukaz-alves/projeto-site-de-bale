@@ -77,14 +77,32 @@ em { color: #FFFFFF; }
 
 .inicio {
   min-height: 620px;
-  padding: 150px 0 100px;
-  background: linear-gradient(90deg, #0A0A0A 15%, rgba(10,10,10,.75) 55%, rgba(10,10,10,.25)),#17131C;
+  padding: 100px 0;
+  background: linear-gradient(
+    90deg,
+    #0A0A0A 15%,
+    rgba(10,10,10,.75) 55%,
+    rgba(10,10,10,.25)
+  ), #17131C;
 }
-.inicio .container {max-width: 1200px; }
+
+.inicio .container {max-width: 1420px; }
+.inicio-conteudo {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 50px;
+}
+.inicio-texto {
+  min-width: 0;
+}
+
 .subtitulo { margin-bottom: 18px; color: #F7C6D9; font-size: 13px; letter-spacing: 3px; text-transform: uppercase; }
 .inicio h1 { margin-bottom: 24px; }
 .texto-inicio { max-width: 500px; margin-bottom: 24px; font-size: 18px; }
 .aviso-foto { margin-top: 55px; color: #9A90A8; font-size: 12px; }
+.inicio-gif { display: flex; align-items: center; justify-content: center; width: 100%; }
+.inicio-gif img { display: block; width: 100%; max-width: 550px; height: auto; object-fit: contain; border-radius: 400px}
 
 .foto-professora > .foto-perfil {width: 360px; height: 480px;}
 
@@ -134,7 +152,20 @@ tbody th { color: #F7C6D9; font: 22px 'Cormorant Garamond', serif; }
 .quatro-colunas article { display: flex; flex-direction: column; gap: 10px; }
 .quatro-colunas p { color: #B3AABF; font-size: 15px; }
 
-.galeria div { min-height: 190px; aspect-ratio: 4 / 3; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+/* CARROSSEL DE IMAGENS */
+.galeria-carrossel { display: flex; align-items: center; gap: 15px; width: 100%; }
+.galeria-janela {flex: 1; min-width: 0; overflow: hidden; padding: 30px 0; }
+.galeria-trilha { display: flex; align-items: center; gap: 12px; }
+.galeria-item { flex: 0 0 calc((100% - 48px) / 5); padding: 0; border: 1px solid #3B3545; 
+  background: #141218; cursor: pointer; opacity: 0.65; transform: scale(0.85);
+  transition: transform 0.4s ease, opacity 0.4s ease; position: relative; }
+.galeria-item img { display: block; width: 100%; aspect-ratio: 1 / 1; height: auto; object-fit: cover; border-radius: 12px; }
+.galeria-item.ativo { opacity: 1; transform: scale(1.12); z-index: 2; border: 2px solid #F7C6D9; border-radius: 14px; }
+.galeria-item.oculto { display: none; }
+.galeria-seta { flex-shrink: 0; width: 42px; height: 42px; border: 1px solid #F7C6D9;
+  background: transparent; color: #F7C6D9; font-size: 20px; cursor: pointer;transition: 0.3s; }
+.galeria-seta:hover { background: #F7C6D9; color: #0A0A0A; }
+
 
 .fundo-claro ul { margin: 25px 0; padding-left: 20px; color: #3F3A4A; }
 .fundo-claro li { margin-bottom: 8px; }
@@ -165,6 +196,11 @@ tbody th { color: #F7C6D9; font: 22px 'Cormorant Garamond', serif; }
   .menu { justify-content: center; }
   .secao#professora, .duas-colunas { grid-template-columns: 1fr; }
   .quatro-colunas { grid-template-columns: repeat(2, 1fr); }
+  .inicio-conteudo { grid-template-columns: 1fr; gap: 35px; }
+  .inicio-gif img { max-width: 450px; }
+
+  .galeria-item { flex-basis: calc((100% - 24px) / 3); }
+  .galeria-item img { height: 190px; }
 }
 
 @media (max-width: 600px) {
@@ -174,4 +210,9 @@ tbody th { color: #F7C6D9; font: 22px 'Cormorant Garamond', serif; }
   .tres-colunas, .quatro-colunas, .formulario { grid-template-columns: 1fr; }
   .formulario button { grid-column: auto; }
   .rodape { justify-content: center; text-align: center; }
+
+  .galeria-carrossel { gap: 8px;}
+  .galeria-item { flex-basis: 100%; }
+  .galeria-item img { height: 250px; }
+  .galeria-seta { width: 32px; height: 38px; font-size: 16px; }
 }

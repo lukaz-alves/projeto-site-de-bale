@@ -10,8 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body> 
- 
-  <!-- Cabeçalho -->
   <header class="cabecalho">
     <a class="logo" href="#inicio">
       <img src="assets/logo.png" alt="Logo do estúdio">
@@ -30,25 +28,32 @@
   </header>
 
   <main>
-    <!-- Apresentação -->
-    <section class="inicio" id="inicio">
-      <div class="container">
-        <p class="subtitulo">Estúdio de balé clássico · Desde 2021</p>
-        <h1>Dançar com<br><em>leveza e técnica</em></h1>
-        <p class="texto-inicio">Aulas de balé para crianças e pré-adolescentes, em turmas pequenas e com muito carinho em cada passo. A primeira aula é por nossa conta.</p>
-
-        <a class="botao" href="#contato">Agendar aula experimental</a>
-        <a class="link" href="#horarios">Ver horários</a>
+    <section class="inicio">
+      <div class="container inicio-conteudo">
+        <div class="inicio-texto">
+          <p class="subtitulo">Estúdio de balé clássico · Desde 2021</p>
+          <h1><em>Dançar com<br>leveza e técnica</em></h1>
+          <p class="texto-inicio">
+            Aulas de balé para crianças e pré-adolescentes, em turmas
+            pequenas e com muito carinho em cada passo. A primeira aula é por nossa conta.
+          </p>
+          <a class="botao" href="#contato">Agendar aula experimental</a>
+          <a class="link" href="#horarios">Ver horários</a>
+        </div>
+        <div class="inicio-gif">
+          <img
+            src="assets/Dança em transformação_ do balé ao logo (0.75x).gif"
+            alt="Animação do estúdio de balé">
+        </div>
       </div>
     </section>
 
-    <!-- Professora -->
     <section class="secao container" id="professora">
       <div class="foto-professora"><img class="foto-perfil" src="assets/prof-camila.jpeg" alt="Foto da professora Camila"></div>
       <div>
         <p class="subtitulo">A professora</p>
         <h2>Professora <em>Camilla</em></h2>
-        <p>Iniciou sua trajetória como professora de dança aos 17 anos, construindo sua experiência e dedicação ao ensino do ballet desde muito jovem.</p><br
+        <p>Iniciou sua trajetória como professora de dança aos 17 anos, construindo sua experiência e dedicação ao ensino do ballet desde muito jovem.</p><br>
         <p>Nos últimos anos, vem se dedicando intensamente ao estudo e ao aprimoramento da metodologia Vaganova.</p><br>
         <P>Em 2021, criou o projeto Curso de Dança Camillavgs, no qual atua como professora de ballet infantil, ensinando e acompanhando o desenvolvimento artístico de crianças.</P>
         <div class="numeros">
@@ -59,7 +64,6 @@
       </div>
     </section>
 
-    <!-- Turmas -->
     <section class="secao fundo-claro" id="aulas">
       <div class="container">
         <div class="titulo-linha">
@@ -94,7 +98,6 @@
       </div>
     </section>
 
-    <!-- Horários -->
     <section class="secao container" id="horarios">
       <div class="titulo-linha">
         <h2 class="centralizado">Agenda</h2>
@@ -111,7 +114,6 @@
       </div>
     </section>
 
-    <!-- Diferenciais -->
     <section class="secao secao-borda">
       <div class="container">
         <h2>Por que escolher o <em>nosso estúdio</em></h2>
@@ -124,22 +126,51 @@
       </div>
     </section>
 
-    <!-- Espaço -->
     <section class="secao container" id="espaco">
       <div class="titulo-linha">
         <h2 class="centralizado">Nosso espaço</h2>
       </div>
-      <div class="grade tres-colunas galeria">
-        <div><img class="imagens" src="assets/InShot_20240203_101655062.jpg" alt="#"></div>
-        <div><img class="imagens" src="assets/InShot_20240203_101713509.jpg" alt="#"></div>
-        <div><img class="imagens" src="assets/InShot_20241114_215030985.jpg" alt="#"></div>
-        <div><img class="imagens" src="assets/InShot_20240203_102927714.jpg" alt="#"></div>
-        <div><img class="imagens" src="assets/InShot_20241114_214500920.jpg" alt="#"></div>
-        <div><img class="imagens" src="assets/InShot_20240206_212244966.jpg" alt="#"></div>
+      <div class="galeria-carrossel">
+        <button class="galeria-seta anterior" type="button" aria-label="Imagem anterior">
+          &#10094;
+        </button>
+        <div class="galeria-janela">
+          <div class="galeria-trilha">
+            <button class="galeria-item" data-index="0" type="button">
+              <img src="assets/InShot_20240203_101655062.jpg" alt="Imagem do estúdio 1">
+            </button>
+            <button class="galeria-item" data-index="1" type="button">
+              <img src="assets/InShot_20240203_101713509.jpg" alt="Imagem do estúdio 2">
+            </button>
+            <button class="galeria-item" data-index="2" type="button">
+              <img src="assets/InShot_20241114_215030985.jpg" alt="Imagem do estúdio 3">
+            </button>
+            <button class="galeria-item" data-index="3" type="button">
+              <img src="assets/InShot_20240203_102927714.jpg" alt="Imagem do estúdio 4">
+            </button>
+            <button class="galeria-item" data-index="4" type="button">
+              <img src="assets/InShot_20241114_214500920.jpg" alt="Imagem do estúdio 5">
+            </button>
+            <button class="galeria-item" data-index="5" type="button">
+              <img src="assets/InShot_20240206_212244966.jpg" alt="Imagem do estúdio 6">
+            </button>
+            <button class="galeria-item" data-index="6" type="button">
+              <img src="assets/InShot_20240203_101655062.jpg" alt="Imagem do estúdio 6">
+            </button>
+            <button class="galeria-item" data-index="7" type="button">
+              <img src="assets/InShot_20240209_165646198.jpg" alt="Imagem do estúdio 6">
+            </button>
+            <button class="galeria-item" data-index="8" type="button">
+              <img src="assets/InShot_20240902_211957902.jpg" alt="Imagem do estúdio 6">
+            </button>
+          </div>
+        </div>
+        <button class="galeria-seta proxima" type="button" aria-label="Próxima imagem">
+          &#10095;
+        </button>
       </div>
     </section>
 
-    <!-- Localização -->
     <section class="secao fundo-claro" id="local">
       <div class="container grade duas-colunas">
         <div>
@@ -154,7 +185,6 @@
       </div>
     </section>
 
-    <!-- Contato -->
     <section class="secao container grade duas-colunas" id="contato">
       <div>
         <p class="subtitulo">Aula experimental grátis</p>
@@ -179,7 +209,6 @@
     </section>
   </main>
 
-  <!-- Rodapé -->
   <footer class="rodape">
     <img src="assets/logo.png" alt="Logo do estúdio">
     <span>Seg 19h30 · Sáb 9h e 10h</span>
@@ -187,5 +216,6 @@
     <span>© 2026 Curso Dança Camillavgs</span>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
