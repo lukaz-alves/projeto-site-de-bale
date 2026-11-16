@@ -42,14 +42,14 @@
         </div>
         <div class="inicio-gif">
           <img
-            src="assets/Dança em transformação_ do balé ao logo (0.75x).gif"
+            src="assets/galeria/gif-dancarina.gif"
             alt="Animação do estúdio de balé">
         </div>
       </div>
     </section>
 
     <section class="secao container" id="professora">
-      <div class="foto-professora"><img class="foto-perfil" src="assets/prof-camila.jpeg" alt="Foto da professora Camila"></div>
+      <div class="foto-professora"><img class="foto-perfil" src="assets/galeria/prof-camila.jpeg" alt="Foto da professora Camila"></div>
       <div>
         <p class="subtitulo">A professora</p>
         <h2>Professora <em>Camilla</em></h2>
@@ -137,31 +137,31 @@
         <div class="galeria-janela">
           <div class="galeria-trilha">
             <button class="galeria-item" data-index="0" type="button">
-              <img src="assets/InShot_20240203_101655062.jpg" alt="Imagem do estúdio 1">
+              <img src="assets/galeria/InShot_20240203_101655062.jpg" alt="Imagem do estúdio 1">
             </button>
             <button class="galeria-item" data-index="1" type="button">
-              <img src="assets/InShot_20240203_101713509.jpg" alt="Imagem do estúdio 2">
+              <img src="assets/galeria/InShot_20240203_101713509.jpg" alt="Imagem do estúdio 2">
             </button>
             <button class="galeria-item" data-index="2" type="button">
-              <img src="assets/InShot_20241114_215030985.jpg" alt="Imagem do estúdio 3">
+              <img src="assets/galeria/InShot_20240203_102927714.jpg" alt="Imagem do estúdio 3">
             </button>
             <button class="galeria-item" data-index="3" type="button">
-              <img src="assets/InShot_20240203_102927714.jpg" alt="Imagem do estúdio 4">
+              <img src="assets/galeria/InShot_20240206_212244966.jpg" alt="Imagem do estúdio 4">
             </button>
             <button class="galeria-item" data-index="4" type="button">
-              <img src="assets/InShot_20241114_214500920.jpg" alt="Imagem do estúdio 5">
+              <img src="assets/galeria/InShot_20240209_165646198.jpg" alt="Imagem do estúdio 5">
             </button>
             <button class="galeria-item" data-index="5" type="button">
-              <img src="assets/InShot_20240206_212244966.jpg" alt="Imagem do estúdio 6">
+              <img src="assets/galeria/InShot_20240902_211957902.jpg" alt="Imagem do estúdio 6">
             </button>
             <button class="galeria-item" data-index="6" type="button">
-              <img src="assets/InShot_20240203_101655062.jpg" alt="Imagem do estúdio 6">
+              <img src="assets/galeria/InShot_20241114_214500920.jpg" alt="Imagem do estúdio 7">
             </button>
             <button class="galeria-item" data-index="7" type="button">
-              <img src="assets/InShot_20240209_165646198.jpg" alt="Imagem do estúdio 6">
+              <img src="assets/galeria/20240803_085137.jpg" alt="Imagem do estúdio 8">
             </button>
             <button class="galeria-item" data-index="8" type="button">
-              <img src="assets/InShot_20240902_211957902.jpg" alt="Imagem do estúdio 6">
+              <img src="assets/galeria/InShot_20241114_215030985.jpg" alt="Imagem do estúdio 9">
             </button>
           </div>
         </div>
@@ -181,7 +181,9 @@
           </ul>
           <a class="botao botao-escuro" href="https://www.google.com/maps/search/?api=1&query=Rua+Mateo+de+Aranda+90+Sao+Paulo+SP" target="_blank" rel="noopener noreferrer">Abrir no mapa</a>
         </div>
-        <div class="mapa">Espaço reservado para inserir o mapa do Google.</div>
+        <div class="mapa">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3655.469659803713!2d-46.49176411301258!3d-23.623345710789916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1794782611558!5m2!1spt-BR!2sbr" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
       </div>
     </section>
 
@@ -190,29 +192,49 @@
         <p class="subtitulo">Aula experimental grátis</p>
         <h2>Venha conhecer <em>o estúdio</em></h2>
         <p>Preencha seus dados e a professora entra em contato para marcar o melhor horário. Se preferir, chame direto no WhatsApp.</p>
-        <a class="link" href="https://wa.me/5511900000000">WhatsApp (11) 90000-0000</a>
+        <a class="contato-whatsapp">
+           <span class="icone-whatsapp"></span>
+          <span class="dados-whatsapp">
+            <strong>Professora Camilla</strong>
+            <small>(11) 94204-0045</small>
+          </span> 
+        </a>
       </div>
-
-      <form class="formulario" onsubmit="alert('Formulário demonstrativo. Configure um serviço de envio para receber inscrições.'); return false;">
-        <label>Nome da aluna<input type="text" name="nome"></label>
-        <label>Idade<input type="number" name="idade"></label>
-        <label>WhatsApp<input type="tel" name="whatsapp"></label>
-        <label>Turma de interesse
-          <select name="turma">
+      
+      <form class="formulario" id="formulario-contato">
+        <label>
+          Nome da aluna <input type="text" name="nome" required>
+        </label>
+        <label>
+          Idade <input type="number" name="idade" min="0" max="10" required>
+        </label>
+        <label>
+          WhatsApp <input type="tel" name="whatsapp" required>
+        </label>
+        <label>
+          Turma de interesse
+          <select name="turma" required>
+            <option value="" disabled selected>Selecione uma turma</option>
             <option>Ballet Kids (4 a 5 anos)</option>
             <option>Infantil 1 (6 a 7 anos)</option>
             <option>Infantil 2 (8 a 10 anos)</option>
           </select>
         </label>
-        <button class="botao" type="submit">Quero minha aula grátis</button>
+        <button class="botao" type="submit">
+          Quero minha aula grátis
+        </button>
       </form>
     </section>
   </main>
 
   <footer class="rodape">
     <img src="assets/logo.png" alt="Logo do estúdio">
-    <span>Seg 19h30 · Sáb 9h e 10h</span>
-    <span>Instagram [@INSTAGRAM]</span>
+    <span>Seg 19h30 · Sáb 9h e ás 10h</span>
+    <a href="https://www.instagram.com/camillavgs/" target="_blank" rel="noopener noreferrer"
+      class="instagram-link" aria-label="Visitar Instagram da professora">
+      <span class="icone-instagram"></span>
+      <p class="link-bold">/camillavgs</p>
+    </a>
     <span>© 2026 Curso Dança Camillavgs</span>
   </footer>
 

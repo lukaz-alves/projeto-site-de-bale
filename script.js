@@ -7,13 +7,21 @@ let imagemAtual = 0;
 
 function atualizarCarrossel() {
   imagens.forEach((imagem, index) => {
-    let posicao = (index - imagemAtual + imagens.length) % imagens.length;
+    const posicao = (index - imagemAtual + imagens.length) % imagens.length;
 
     imagem.classList.remove('ativo', 'oculto');
 
-    imagem.style.order = (posicao + 2) % imagens.length;
+    if (posicao === imagens.length - 1) {
+      imagem.style.order = 0;
+    } 
+    else if (posicao === 0) {
+      imagem.style.order = 1;
+    } 
+    else {
+      imagem.style.order = 2;
+    }
 
-    if (posicao === 3) {
+    if (posicao > 1 && posicao < imagens.length - 1) {
       imagem.classList.add('oculto');
     }
 
@@ -23,19 +31,16 @@ function atualizarCarrossel() {
   });
 }
 
-// Próxima imagem
 proxima.addEventListener('click', () => {
   imagemAtual = (imagemAtual + 1) % imagens.length;
   atualizarCarrossel();
 });
 
-// Imagem anterior
 anterior.addEventListener('click', () => {
   imagemAtual = (imagemAtual - 1 + imagens.length) % imagens.length;
   atualizarCarrossel();
 });
 
-// Clicar diretamente em uma imagem
 imagens.forEach((imagem, index) => {
   imagem.addEventListener('click', () => {
     imagemAtual = index;
@@ -43,5 +48,33 @@ imagens.forEach((imagem, index) => {
   });
 });
 
-// Inicializar carrossel
 atualizarCarrossel();
+
+
+const formulario = document.getElementById("formulario-contato");
+
+formulario.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const numeroProfessora = "5511942040045";
+
+  const nome = formulario.elements["nome"].value;
+  const idade = formulario.elements["idade"].value;
+  const whatsapp = formulario.elements["whatsapp"].value;
+  const turma = formulario.elements["turma"].value;
+
+  const mensagem = 
+`Olá, professora Camilla! Gostaria de agendar uma aula experimental.
+
+*Informações da aluna:*
+
+Nome: ${nome}
+Idade: ${idade} anos
+WhatsApp do responsável: ${whatsapp}
+Turma de interesse: ${turma}
+
+Aguardo seu retorno!`;
+
+  const link = `https://wa.me/${numeroProfessora}?text=${encodeURIComponent(mensagem)}`;
+  window.open(link, "_blank");
+});
