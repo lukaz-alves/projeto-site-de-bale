@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="16x16"  href="/assets/favicon-logo.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
   <title>Curso de Dança Camillavgs</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -187,6 +190,37 @@
       </div>
     </section>
 
+    <section class="secao-depoimentos">
+      <div class="container-depoimentos">
+        <h2 class="titulo-depoimentos">O que dizem nossos clientes</h2>
+        
+        <div class="grade-depoimentos">
+
+          <div class="card-depoimento">
+            <img src="assets/depoimentos/depoimento-2.jpeg" alt="Depoimento 1" onclick="abrirZoom(this.src)">
+          </div>
+          <div class="card-depoimento">
+            <img src="assets/depoimentos/depoimento-1.jpeg" alt="Depoimento 2" onclick="abrirZoom(this.src)">
+          </div>
+          <div class="card-depoimento">
+            <img src="assets/depoimentos/depoimento-3.jpeg" alt="Depoimento 3" onclick="abrirZoom(this.src)">
+          </div>
+
+          <div class="card-depoimento">
+            <img src="assets/depoimentos/depoimento-4.jpeg" alt="Depoimento 4" onclick="abrirZoom(this.src)">
+          </div>
+          <div class="card-depoimento">
+            <img src="assets/depoimentos/depoimento-5.jpeg" alt="Depoimento 5" onclick="abrirZoom(this.src)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="modal-zoom" class="modal-zoom" onclick="fecharZoom()">
+      <span class="fechar-zoom">&times;</span>
+      <img id="img-zoom" src="" alt="Depoimento ampliado">
+    </div>
+
     <section class="secao container grade duas-colunas" id="contato">
       <div>
         <p class="subtitulo">Aula experimental grátis</p>
@@ -238,6 +272,8 @@
     <span>© 2026 Curso Dança Camillavgs</span>
   </footer>
 
+  <button id="btnTopo" type="button" aria-label="Voltar ao topo">↑</button>
+  
   <script src="script.js"></script>
 </body>
 </html>

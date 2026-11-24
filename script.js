@@ -50,7 +50,6 @@ imagens.forEach((imagem, index) => {
 
 atualizarCarrossel();
 
-
 const formulario = document.getElementById("formulario-contato");
 
 formulario.addEventListener("submit", function(event) {
@@ -77,4 +76,22 @@ Aguardo seu retorno!`;
 
   const link = `https://wa.me/${numeroProfessora}?text=${encodeURIComponent(mensagem)}`;
   window.open(link, "_blank");
+});
+
+function abrirZoom(src) {
+  document.getElementById('img-zoom').src = src;
+  document.getElementById('modal-zoom').style.display = 'flex';
+}
+function fecharZoom() {
+  document.getElementById('modal-zoom').style.display = 'none';
+}
+
+const btnTopo = document.getElementById("btnTopo");
+
+window.addEventListener("scroll", () => {
+  btnTopo.classList.toggle("visivel", window.scrollY > 300);
+});
+
+btnTopo.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
